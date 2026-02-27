@@ -10,7 +10,7 @@ on:
     types:
       - completed
     branches:
-      - master
+      - testing
   schedule:
     - cron: "05 07 * * 5"
 

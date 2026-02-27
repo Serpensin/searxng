@@ -10,7 +10,7 @@ on:
     types:
       - completed
     branches:
-      - master
+      - testing
 
 concurrency:
   group: ${{ github.workflow }}
@@ -163,7 +163,7 @@ jobs:
         run: make container.test
 
   release:
-    if: github.repository_owner == 'searxng' && github.ref_name == 'master'
+    if: github.repository_owner == 'searxng' && github.ref_name == 'testing'
     name: Release
     runs-on: ubuntu-24.04-arm
     needs:
